@@ -19,15 +19,21 @@
     <title>Happy Birthday Moyna - Many Many Happy Returns of The Day</title>
     <link
       rel="icon"
-      href="http://pngimg.com/uploads/netflix/small/netflix_PNG15.png"
+      href="./src/img/logo1.jpg"
     />
+    <style>
+      canvas { display:none; }
+      #birthday {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <header>
       <nav class="navbar">
         <div class="navbar__brand">
           <img
-            src="https://www.freepnglogos.com/uploads/netflix-logo-0.png"
+            src="./src/img/logo.png"
             alt="logo"
             class="brand__logo"
           />
@@ -48,8 +54,9 @@
           </div>
 
           <div class="nav__item">
-            <button class="signin__button">Sign in</button>
-          </div>
+            <button class="signin__button" id="fireworksButton" onclick="handleFireworksButtonClick()">Click Here</button>
+            <canvas id="birthday"></canvas>
+          </div>         
         </div>
       </nav>
     </header>
@@ -67,34 +74,32 @@
 
         <div class="hero__card">
           <h1 class="hero__title">
-            Unlimited Movies TV,<br />
-            Shows and More.
+            Happy Birthday, <br />
+            Anniversary also
           </h1>
-          <p class="hero__subtitle">Watch anywhere and cancel anytime.</p>
-          <p class="hero__description">
-            Ready to watch? Enter your email to create or restart your
-            membership .
-          </p>
+        
 
           <div class="email__form__container">
             <div class="form__container">
-              <input type="email" class="email__input" placeholder=" " />
-              <label class="email__label">Email Address</label>
+              <input type="text" class="email__input" placeholder=" " />
+              <label class="email__label">Date</label>
             </div>
-            <button class="primary__button">
+            <button class="primary__button" onclick="validateForm2()">
               Get Started <i class="fal fa-chevron-right"></i>
             </button>
           </div>
+          <p class="hero__description">
+            Ready to watch? Enter the date your relationship started (in dd-mm-yyyy format) or you're not eligible
+           </p>
         </div>
       </section>
       <section class="features__container">
         <!-- Feature 1 -->
         <div class="feature">
           <div class="feature__details">
-            <h3 class="feature__title">Enjoy on your TV.</h3>
+            <h3 class="feature__title">Enjoy your Day</h3>
             <h5 class="feature__sub__title">
-              Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
-              Blu-ray players and more.
+              Watch a good movie, play games, go out with mom, eat good foods, cut cake and miss your cutu wife.
             </h5>
           </div>
           <div class="feature__image__container">
@@ -119,29 +124,29 @@
         <div class="feature">
           <div class="feature__details">
             <h3 class="feature__title">
-              Download your shows to watch offline.
+              Go through all of our favourite moments
             </h3>
             <h5 class="feature__sub__title">
-              Save your favourites easily and always have something to watch.
+              Two years are ending, but it seems like I'm spending eternity with you. You've become my habit in every moment.
             </h5>
           </div>
           <div class="feature__image__container">
             <img
               src="./src/img/hug.png"
-              style="width: 380px; height: 520px;"
+              style="width: 350px; height: 520px;"
               alt="Feature image"
               class="feature__image"
             />
-            <div class="feature__2__poster__container" style="margin-left:-15px;width:90%;">
+            <div class="feature__2__poster__container">
               <div class="poster__container">
                 <img
-                  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png"
+                  src="./src/vdo/us.gif"
                   alt="poster"
                   class="poster"
                 />
               </div>
               <div class="poster__details">
-                <h4>Cutu Us</h4>
+                <h4>3rd Year With U</h4>
                 <h6>Loading...</h6>
               </div>
               <div class="download__gif__container">
@@ -157,11 +162,10 @@
         <!-- Feature 3 -->
         <div class="feature">
           <div class="feature__details">
-            <h3 class="feature__title">Watch everywhere.</h3>
+            <h3 class="feature__title">Marry me soon.</h3>
             <h5 class="feature__sub__title">
-              Stream unlimited movies and TV shows on your phone, tablet,
-              laptop, and TV.
-            </h5>
+              Don't you miss me? Next year, please propose to me for marriage and bring 'Laxmi' into your home soon.
+             </h5>
           </div>
           <div class="feature__image__container">
             <img
@@ -184,15 +188,14 @@
         <!-- Feature 4 -->
         <div class="feature">
           <div class="feature__details">
-            <h3 class="feature__title">Create profiles for children.</h3>
+            <h3 class="feature__title">Make your Wife Proud</h3>
             <h5 class="feature__sub__title">
-              Send children on adventures with their favourite characters in a
-              space made just for them—free with your membership.
+              Pamper your wife all the time, love her, take her out with you, and go on a world tour with her. It's not possible now, so now just study hard and build a good career.
             </h5>
           </div>
           <div class="feature__image__container">
             <img
-              src="./src/vdo/us.gif"
+              src="./src/vdo/us2.gif"
               alt="Feature image"
               class="feature__image"
             />
@@ -213,6 +216,17 @@
               <p>
                 He is also known as 'Moyna', the apple of Promi's eye. He is everything in her life. Without him, she can't survive a day.
               </p>
+            </div>
+          </div>
+          <div class="FAQ__accordian">
+            <button class="FAQ__title">
+              When was he born?<i class="fal fa-plus"></i>
+            </button>
+            <div class="FAQ__visible">
+              <p>
+                On the auspicious moment of April 11th, 2000, he was born. Today, he has become the most handsome 24-year-old man in the world.
+              </p>
+              
             </div>
           </div>
           <div class="FAQ__accordian">
@@ -314,7 +328,8 @@
         <p>SumontaPromi</p>
       </div>
     </footer>
-
+    
+    
     <script src="src/index.js"></script>
   </body>
 </html>
